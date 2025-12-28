@@ -1,0 +1,18 @@
+let s=0,w=0;
+
+function S(){ s++; U(); }
+function W(){ w++; U(); }
+
+function U(){
+  sEl.innerText=s;
+  wEl.innerText=w;
+
+  if(s>=5&&w>=5){ p.innerText="🌳"; t.innerText="Thriving!"; }
+  else if(s>=3&&w>=3){ p.innerText="🌿"; t.innerText="Growing!"; }
+  else if(s>=1&&w>=1){ p.innerText="🌱"; t.innerText="Sprouted!"; }
+}
+
+const sEl=document.getElementById("s"),
+      wEl=document.getElementById("w"),
+      p=document.getElementById("p"),
+      t=document.getElementById("t");
