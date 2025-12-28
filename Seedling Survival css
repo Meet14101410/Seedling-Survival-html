@@ -1,0 +1,31 @@
+body{
+  font-family:Arial, sans-serif;
+  text-align:center;
+  background:#e8ffe8;
+  color:#234;
+}
+
+h2{margin-top:20px}
+
+#p{
+  font-size:70px;
+  margin:20px 0;
+}
+
+button{
+  padding:10px 18px;
+  margin:8px;
+  border:none;
+  border-radius:8px;
+  background:#6fdc6f;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#55c855;
+}
+
+#t{
+  font-weight:bold;
+  margin-top:10px;
+}
