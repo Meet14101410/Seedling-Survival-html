@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seedling Survival</title>
+  <style>
+    body{font-family:Arial;text-align:center;background:#e8ffe8}
+    #plant{font-size:70px;margin:20px}
+    button{font-size:18px;margin:10px;padding:10px 20px}
+  </style>
+</head>
+<body>
+  <h1>Seedling Survival 🌱</h1>
+  <p>Collect sunlight & water to help the plant grow!</p>
+
+  <div id="plant">🌱</div>
+
+  <p>Sunlight: <span id="sun">0</span> ☀️ |
+     Water: <span id="water">0</span> 💧</p>
+
+  <button onclick="sun()">Get Sunlight</button>
+  <button onclick="water()">Add Water</button>
+
+  <h3 id="status">Keep growing...</h3>
+
+  <script>
+    let s=0,w=0;
+    function sun(){s++;update();}
+    function water(){w++;update();}
+    function update(){
+      document.getElementById("sun").textContent=s;
+      document.getElementById("water").textContent=w;
+      const plant=document.getElementById("plant");
+      const status=document.getElementById("status");
+
+      if(s>=5 && w>=5){plant.textContent="🌳";status.textContent="Your plant is thriving!";}
+      else if(s>=3 && w>=3){plant.textContent="🌿";status.textContent="Growing well!";}
+      else if(s>=1 && w>=1){plant.textContent="🌱";status.textContent="Seedling sprouted!";}
+    }
+  </script>
+</body>
+</html>
